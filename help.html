@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help | Café Sanova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* --- Reset & Base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f6eee3;
+      color: #3e2723;
+      scroll-behavior: smooth;
+    }
+
+    /* --- Header --- */
+    header {
+      background-color: #3e2723;
+      color: #f8ede3;
+      text-align: center;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 45px;
+      letter-spacing: 2px;
+    }
+
+    /* --- Navbar --- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+
+    nav ul li a {
+      color: #f8ede3;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc80;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 3px;
+    }
+
+    /* --- Help Section --- */
+    .help-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    .help-container h2 {
+      text-align: center;
+      font-size: 30px;
+      color: #4e342e;
+      margin-bottom: 20px;
+    }
+
+    .help-container p.intro {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* --- FAQ Boxes --- */
+    .faq {
+      background-color: #fff8f2;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq h3 {
+      color: #3e2723;
+      margin-bottom: 10px;
+    }
+
+    .faq p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* --- Still Need Help --- */
+    .help-footer {
+      background-color: #fff8f2;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .help-footer a {
+      color: #3e2723;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #ffcc80;
+      padding: 10px 25px;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .help-footer a:hover {
+      background-color: #ffb74d;
+      transform: scale(1.05);
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #3e2723;
+      color: #f8ede3;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #ffcc80;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Café Sanova</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Help Section -->
+  <div class="help-container">
+    <h2>Need Help?</h2>
+    <p class="intro">We’re here to make your Café Sanova experience smooth and enjoyable. Find answers to common questions below.</p>
+
+    <div class="faq">
+      <h3>Q1: How can I make a reservation?</h3>
+      <p>You can reserve a table by calling us at +91 9322799275 or sending us a message via our Contact page.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Q2: Do you offer take-away or delivery?</h3>
+      <p>Yes! All our menu items are available for take-away. Delivery is available through local delivery apps.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Q3: What are your opening hours?</h3>
+      <p>We’re open daily from 8:00 AM to 10:00 PM.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Q4: Can I provide feedback?</h3>
+      <p>Absolutely! Visit our Contact page and send us a message. We love hearing from our customers.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Q5: Do you cater for events or parties?</h3>
+      <p>Yes, we offer catering for small events. Please contact us for details.</p>
+    </div>
+
+    <div class="help-footer">
+      <p>Still need help? Send us a message and we’ll get back to you promptly.</p>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Café Sanova | Brewed with love </p>
+    <div class="socials">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>

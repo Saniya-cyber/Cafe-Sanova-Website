@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Sanova</title>
+  <link rel="icon" href="coffee-icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Reset & Base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f6eee3;
+      color: #3e2723;
+      scroll-behavior: smooth;
+    }
+
+    /* --- Header --- */
+    header {
+      background-color: #3e2723;
+      color: #f8ede3;
+      text-align: center;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h1 {
+      font-size: 45px;
+      letter-spacing: 2px;
+    }
+
+    /* --- Navbar --- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+    }
+
+    nav ul li a {
+      color: #f8ede3;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc80;
+      border-bottom: 2px solid #ffcc80;
+      padding-bottom: 3px;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-content h2 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #4e342e;
+    }
+
+    .btn {
+      background: #ffcc80;
+      color: #3e2723;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffb74d;
+      transform: scale(1.05);
+    }
+
+    /* --- About Section --- */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #4e342e;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    section p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    /* --- Menu Highlights --- */
+    .menu-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .menu-item {
+      background: #fff8f2;
+      border-radius: 15px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* --- Visit Us Section --- */
+    .hours {
+      background-color: #f6eee3;
+      padding: 60px 20px;
+      border-top: 2px solid #3e2723;
+    }
+
+    .hours p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* --- Reviews Section --- */
+    .reviews {
+      background: #fff8f2;
+      padding: 60px 20px;
+    }
+
+    .review {
+      background: #f6eee3;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .review p {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #3e2723;
+      color: #f8ede3;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer .socials {
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: #ffcc80;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Café Sanova</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <!-- Menu Highlights -->
+  <section id="menu">
+    <h2>Our Specialties</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="caramel.jpg" alt="Caramel Latte">
+        <h3>Caramel Latte</h3>
+        <p>Rich espresso with velvety caramel and creamy milk foam.</p>
+      </div>
+      <div class="menu-item">
+        <img src="brownie.jpg" alt="Chocolate Brownie">
+        <h3>Chocolate Brownie</h3>
+        <p>Soft, gooey, and freshly baked every morning.</p>
+      </div>
+      <div class="menu-item">
+        <img src="sand.jpg" alt="Grilled Sandwich">
+        <h3>Grilled Sandwich</h3>
+        <p>Perfectly toasted bread with cheese and fresh veggies.</p>
+      </div>
+      <div class="menu-item">
+        <img src="cross.webp" alt="Croissant">
+        <h3>Croissant</h3>
+        <p>A little Paris in every bite.</p>
+      </div>
+      <div class="menu-item">
+        <img src="pasta.jpg" alt="spaghetti">
+        <h3>spaghetti</h3>
+        <p>Italian love, served warm.</p>
+      </div>
+      <div class="menu-item">
+        <img src="coffee.webp" alt="coffee">
+        <h3>Expresso</h3>
+        <p>Brewed to awaken your soul.</p>
+      </div>
+    <div class="menu-item">
+        <img src="muffin.jpg" alt="muffins">
+        <h3>Blueberry muffins</h3>
+        <p>Bursting with blueberry goswodness.</p>
+      </div>
+      <div class="menu-item">
+        <img src="salad.webp" alt="Greek salad">
+        <h3>Greek salad</h3>
+        <p>Fresh flavors that brighten your day.</p>
+      </div>
+      <div class="menu-item">
+        <img src="wpasta.jpg" alt="White Sauce Pasta">
+        <h3>spaghetti</h3>
+        <p>Creamy comfort in every twirl!</p>
+      </div>
+      <div class="menu-item">
+        <img src="burger.jpg" alt="Burger">
+        <h3>Mexican Burger</h3>
+        <p>A fiesta in every bite</p>
+      </div>
+    <div class="menu-item">
+        <img src="pizza.jpg" alt="Pizza">
+        <h3>Barbeque Sauce Pizza</h3>
+        <p>Smoky, saucy, and oh-so-delicious!</p>
+      </div>
+      <div class="menu-item">
+        <img src="fries.jpeg" alt="Cheesy Fries">
+        <h3>Cheesy Fries</h3>
+        <p>Golden, gooey, and totally irresistible!</p>
+      </div>
+      
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="review">
+      <p>"The best cappuccino in town! The ambiance is so warm and relaxing."</p>
+      <h4>- Priya Sharma</h4>
+    </div>
+    <div class="review">
+      <p>"Perfect place for evening hangouts and desserts!"</p>
+      <h4>- Aarav Mehta</h4>
+    </div>
+  </section>
+
+  <!-- Visit Us -->
+  <section class="hours">
+    <h2>Visit Us</h2>
+    <p>📍 123 Brew Street, Pune, Maharashtra</p>
+    <p>🕒 Open Daily: 8:00 AM - 10:00 PM</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Café Sanova | Brewed with love </p>
+    <div class="socials">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
