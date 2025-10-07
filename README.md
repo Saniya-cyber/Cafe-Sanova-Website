@@ -22,16 +22,6 @@ The design reflects a cozy café experience — simple, aesthetic, and user-frie
 
 ---
 
-## 🖼️ Preview
-![Café Sanova Screenshot](pasta.jpg)
-
-*(Replace this image with an actual screenshot of your website — upload it in the repo and update the image name here.)*
-
----
-
 ## 🚀 Getting Started
 To view the website locally:
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/cafe-sanova.git
