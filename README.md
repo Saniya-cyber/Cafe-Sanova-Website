@@ -22,6 +22,5 @@ The design reflects a cozy café experience — simple, aesthetic, and user-frie
 
 ---
 
-## 🚀 Getting Started
-To view the website locally:
+
 
